@@ -15,12 +15,12 @@ define('ROOT', dirname(WEBROOT));
 define('DS', DIRECTORY_SEPARATOR);
 define('SRC', ROOT . DS . 'src');
 
-$config = require '../config.php';
+$config = require ROOT . DS . 'config.php';
 
 require SRC . DS . 'functions.php';
-require SRC . DS . 'core/database.php';
-require SRC . DS . 'core/Controller.php';
-require SRC . DS . 'core/Router.php';
+require SRC . DS . 'core' . DS . 'database.php';
+require SRC . DS . 'core' . DS . 'Controller.php';
+require SRC . DS . 'core' . DS . 'Router.php';
 
 // Init Database
 $database = new Database();
