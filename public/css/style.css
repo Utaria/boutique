@@ -1,0 +1,1022 @@
+/****************************************/
+/*    GENERAL                           */
+/****************************************/
+html{height:100%}
+p{color:#DDD}
+img{width: 96px; height: 96px; margin: 20px auto;display: block; position: relative}
+.halo {
+	display: block;position: fixed;
+	top: 0;bottom: 0;right: 0;left: 0;
+	width: 100%;height: 100%;
+	
+	background: rgba(0,0,0,0.5);
+}
+section#main {margin-top:0}
+
+/* Champs de formulaire */
+.input {
+	display: block;position: relative;
+	width: 100%;height: auto;
+	
+	margin: 25px 0;
+}
+
+.input input {
+	display: block;position: relative;
+	width: 100%;height: 40px;
+	
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-size: .85em;
+
+	background: none;
+	border-bottom: 1px solid #DDD;
+	color: #DDD;
+}
+.input input:focus {
+	border-color: #AAA;
+}
+
+::-webkit-input-placeholder{color:#DDD}
+:-moz-placeholder{color:#DDD;opacity:1}
+::-moz-placeholder{color:#DDD;opacity:1}
+:-ms-input-placeholder{color:#DDD}
+
+
+/* Boîte centrale */
+body {
+	width:100%;height:100%;
+	display:flex;
+	
+	justify-content:center;
+	align-items:center;
+}
+body:before {
+	display: block;position: fixed;
+	left: 0;top: 0;bottom: 0;right: 0;
+	width: 100%;height: 100%;
+	
+	background: rgba(0,0,0,0.8);
+}
+
+.main-container {
+	display: block;position: relative;
+	width: 700px;height: 400px;
+	
+	background: rgba(55, 59, 77, 0.9);
+	margin: auto;
+}
+.main-container p {color:#CCC}
+
+.main-container:after {
+	content: "Boutique d'Utaria v" attr(data-version);
+	display: block;position: absolute;
+	bottom: -20px;right: 0;left: 0;
+	width: 100%;height: 15px;
+	
+	z-index: 15;
+	
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	text-align: right;
+	font-size: 12px;
+	color: #AAA;
+}
+
+.main-container .left-bar {
+	display: block;position: relative;
+	width: 100px;height: 100%;
+	
+	z-index: 2;
+	
+	background: #FFF;
+	float: left;
+}
+
+.main-container .left-bar .symbol-back {
+	display: block;position: relative;
+	width: 60px;height: 60px;
+	
+	background: url(../img/left.png) no-repeat center center;
+	margin: 20px;
+}
+.main-container .left-bar .symbol-cancel {
+	display: block;position: relative;
+	width: 60px;height: 60px;
+	
+	background: url(../img/cross.png) no-repeat center center;
+	margin: 20px;
+}
+
+.main-container .left-bar .user-info .coins {
+	display: block;position: absolute;
+	width: 100%;height: 100px;
+	bottom: 0;
+	
+	background: url(../img/coins.png) no-repeat top center;
+}
+.main-container .left-bar .user-info .coins span {
+	display: block;position: relative;
+	width: 100%;height: auto;
+	
+	margin-top: 50px;
+	
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	text-align: center;
+	font-weight: bold;
+	
+	/*color: #f1c40f;*/
+	color: #383838;
+}
+.main-container .left-bar .user-info span.playername {
+	display: block;position: absolute;
+	width: 100%;height: auto;
+	bottom: 10px;
+	
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	font-size: 0.7em;
+	text-align: center;
+	font-weight: bold;
+	
+	/*color: #f1c40f;*/
+	color: #676767;
+}
+.main-container + .secure-form {
+	display: block;position: relative;
+	width: 700px;height: 15px;
+	margin: 5px auto;
+	
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: #27ae60;
+}
+
+
+/****************************************/
+/*    PAGE D'ACCUEIL                    */
+/****************************************/
+body.index-page {
+	display: block;
+	align-items: stretch;
+	-webkit-justify-content: flex-start;
+	        justify-content: flex-start;
+}
+body.index-page:before {
+	background: -moz-linear-gradient(top,rgba(0,0,0,0) 0,rgba(49,52,75,.17) 6%,rgba(49,52,75,.34) 12%,rgba(49,52,75,.98) 89%);
+    background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(49,52,75,.17) 6%,rgba(49,52,75,.34) 12%,rgba(49,52,75,.98) 89%);
+    background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(49,52,75,.17) 6%,rgba(49,52,75,.34) 12%,rgba(49,52,75,.98) 89%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#fa31344b', GradientType=0 );
+}
+body.index-page section#main {margin-top:7%}
+
+body.index-page p {
+	text-align: center;
+	font-size: 0.9em;
+	color: #DDD;
+	
+	margin-bottom: 30px;
+}
+body.index-page p a {color:#2980b9}
+
+body.index-page .btn-login {
+	display: block;position: relative;
+	width: 350px;height: 70px;
+	margin: 20px auto;
+	
+	background: #2980b9;
+	border: 5px solid #2980b9;
+	-webkit-border-radius: 2.5px;
+	        border-radius: 2.5px;
+
+	line-height: 60px;
+	text-align: center;
+	color: #FFF;
+	
+	font-family: "Open Sans", sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1em;
+	
+	-webkit-transition: ease-out .2s;
+	   -moz-transition: ease-out .2s;
+	    -ms-transition: ease-out .2s;
+	     -o-transition: ease-out .2s;
+	        transition: ease-out .2s;
+}
+body.index-page .btn-login:hover {
+	cursor: pointer;
+	background: transparent;
+}
+
+
+/****************************************/
+/*    PAGE DE CONNEXION                 */
+/****************************************/
+.login-container .sign-in-container {
+	display: block;position: relative;
+	width: 300px;height: 100%;
+	
+	margin-left: 0;
+	z-index: 3;
+	
+	-webkit-transition: ease-out .3s;
+	   -moz-transition: ease-out .3s;
+	    -ms-transition: ease-out .3s;
+	     -o-transition: ease-out .3s;
+	        transition: ease-out .3s;
+
+	background: #9165F3;
+	overflow: hidden;
+	float: left;
+}
+.login-container .sign-in-container *,
+.login-container .sign-up-container * {
+	-webkit-transition: ease-out .3s;
+	   -moz-transition: ease-out .3s;
+	    -ms-transition: ease-out .3s;
+	     -o-transition: ease-out .3s;
+	        transition: ease-out .3s;
+}
+.login-container .sign-in-container:hover,
+.login-container .sign-up-container:hover {cursor:pointer}
+
+.login-container .sign-in-container.focus-in  {width:325px}
+.login-container .sign-in-container.focus-out {width:275px}
+
+.login-container .sign-up-container.focus-in  {width:325px}
+.login-container .sign-up-container.focus-out {width:275px}
+
+
+.login-container .sign-in-container.closed {width:75px}
+.login-container .sign-up-container.opened {width:525px}
+.login-container .sign-in-container.opened {width:525px}
+.login-container .sign-up-container.closed {width:75px}
+
+.login-container .sign-in-container.closed.focus-in  {width:100px}
+.login-container .sign-up-container.opened.focus-out {width:500px}
+
+.login-container .sign-in-container.opened.focus-out {width:500px}
+.login-container .sign-up-container.closed.focus-in  {width:100px}
+
+
+
+.login-container .sign-up-container {
+	display: block;position: relative;
+	width: 300px;height: 100%;
+	
+	-webkit-transition: ease-out .3s;
+	   -moz-transition: ease-out .3s;
+	    -ms-transition: ease-out .3s;
+	     -o-transition: ease-out .3s;
+	        transition: ease-out .3s;
+	
+	z-index: 2;
+	
+	overflow: hidden;
+	margin-left: 0;
+	float: left;
+}
+
+.login-container .sign-in-container i.fa,
+.login-container .sign-up-container i.fa {
+	display: block;position: relative;
+	width: 100%;height: auto;
+	
+	margin-top: 140px;
+	margin-bottom: 20px;
+	
+	color: #fff;
+	text-align: center;
+	font-size: 3em;
+}
+.login-container .sign-in-container span.title,
+.login-container .sign-up-container span.title {
+	display: block;position: relative;
+	width: 100%;height: auto;
+	
+	font-family: "Open Sans", Helvetica, Arial;
+	font-weight: 700;
+	font-size: 1.2em;
+	
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.login-container .sign-in-container.focus-out span.title,
+.login-container .sign-in-container.focus-out i.fa,
+.login-container .sign-up-container.focus-out span.title,
+.login-container .sign-up-container.focus-out i.fa {color:rgba(255,255,255,0.6)}
+
+.login-container .sign-in-container.closed span.title,
+.login-container .sign-up-container.closed span.title {display:none}
+.login-container .sign-in-container.closed i.fa,
+.login-container .sign-up-container.closed i.fa {
+	font-size: 2em;
+	margin-top: 20px;
+}
+
+.login-container .sign-in-container.opened span.title,
+.login-container .sign-up-container.opened span.title {display:none}
+.login-container .sign-in-container.opened i.fa,
+.login-container .sign-up-container.opened i.fa {display:none}
+
+.login-container .sign-in-container.opened .open-container,
+.login-container .sign-up-container.opened .open-container {display:block}
+
+.login-container .sign-in-container .open-container,
+.login-container .sign-up-container .open-container {
+	display: none;position: relative;
+	margin: 40px 70px;
+	margin-right: 100px;
+}
+
+.login-container .sign-in-container .open-container h1,
+.login-container .sign-up-container .open-container h1 {
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	font-size: 1.4em;
+	color: #FFF;
+	
+	margin-bottom: 15px;
+}
+
+.login-container .sign-in-container .open-container div.contenu,
+.login-container .sign-up-container .open-container div.contenu {
+	font-family: Helvetica, Arial, sans-serif;
+	color: #AAA;
+}
+.login-container div.contenu span.ip-server{color:#f1c40f;font-weight:bold;text-transform:uppercase}
+
+.login-container .sign-in-container button[type="submit"] {
+	display: block;position: relative;
+	width: 100px;height: 40px;
+	
+	background: rgba(0,0,0,0.3);
+	-webkit-border-radius: 50px;
+	        border-radius: 50px;
+	
+	-webkit-transition: ease-out .2s;
+	   -moz-transition: ease-out .2s;
+	    -ms-transition: ease-out .2s;
+	     -o-transition: ease-out .2s;
+	        transition: ease-out .2s;
+	
+	float: right;
+}
+.login-container .sign-in-container button[type="submit"]:after {
+	display: block;position: absolute;
+	left: 0;right: 0;bottom: 0;top: 0;
+	width: 100%;height: 100%;
+	content: " ";
+	
+	-webkit-transition: ease-out .2s;
+	   -moz-transition: ease-out .2s;
+	    -ms-transition: ease-out .2s;
+	     -o-transition: ease-out .2s;
+	        transition: ease-out .2s;
+	
+	background: url(../img/long-arrow-right.png) no-repeat center;
+	-webkit-background-size: 40%;
+	     -o-background-size: 40%;
+	        background-size: 40%;
+}
+
+.login-container .sign-in-container .input.error   button[type="submit"] {
+	background:rgba(231,76,60,0.4);
+	-webkit-animation: shake 1s ease-out;
+	   -moz-animation: shake 1s ease-out;
+	    -ms-animation: shake 1s ease-out;
+	     -o-animation: shake 1s ease-out;
+	        animation: shake 1s ease-out;
+}
+.login-container .sign-in-container .input.error   button[type="submit"]:after {
+	background: url(../img/warn.png) no-repeat center;
+	-webkit-background-size: 30%;
+	     -o-background-size: 30%;
+	        background-size: 30%;
+}
+.login-container .sign-in-container .input.success button[type="submit"] {
+	-webkit-animation: shake 1s ease-out;
+	   -moz-animation: shake 1s ease-out;
+	    -ms-animation: shake 1s ease-out;
+	     -o-animation: shake 1s ease-out;
+	        animation: shake 1s ease-out;
+}
+.login-container .sign-in-container .input.success button[type="submit"]:after {
+	background: url(../img/checkmark.png) no-repeat center;
+	-webkit-background-size: 30%;
+	     -o-background-size: 30%;
+	        background-size: 30%;
+}
+.login-container .sign-in-container .input.waiting button[type="submit"] {background: #FFF;}
+.login-container .sign-in-container .input.waiting button[type="submit"]:after {
+	background: url(../img/loader.gif) no-repeat center;
+	-webkit-background-size: 30%;
+	     -o-background-size: 30%;
+	        background-size: 30%;
+}
+
+.login-container .sign-in-container span.error-label {
+	display: none;position: relative;
+	width: 200px;height: auto;
+	float: left;
+	
+	left: 40px;
+	
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	
+	font-weight: bold;
+	text-align: right;
+	color: red;
+}
+
+
+/****************************************/
+/*    CHOIX DU MOYEN DE PAIEMENT        */
+/****************************************/
+.means-of-payment {
+	display: block;position: relative;
+	width: 600px;height: 100%;
+	
+	padding: 50px;
+	
+	float: left;
+}
+.means-of-payment .mean {
+	display: block;position: relative;
+	width: 200px;height: 113px;
+	
+	margin: 20px 25px;
+	float: left;
+	
+	-webkit-transition: ease-out .2s;
+	   -moz-transition: ease-out .2s;
+	    -ms-transition: ease-out .2s;
+	     -o-transition: ease-out .2s;
+	        transition: ease-out .2s;
+	
+	background-color: rgba(0,0,0,0.4);
+}
+
+.means-of-payment h1.title {
+	display: block;position: absolute;
+	top: 15px;left: 15px;
+	
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	font-size: 1.4em;
+	color: #DDD;
+}
+
+.means-of-payment .mean:hover {
+	background: rgba(0,0,0,0.7);
+	cursor: pointer;
+}
+
+.means-of-payment .mean:after {
+	display: block;position: absolute;
+	left: -3px;top: -3px;right: -3px;bottom: -3px;
+	width: 100%;height: 100%;
+	content: " ";
+	
+	border: 0 solid rgba(255,255,255,0.1);
+}
+.means-of-payment .mean:hover:after {
+	border-width: 3px;
+}
+
+.means-of-payment .mean .logo {
+	display: block;position: absolute;
+	left: 0;top: 0;bottom: 0;right: 0;
+	width: 100%;height: 100%;
+}
+
+.means-of-payment .mean.paypal .logo {
+	background: url(../img/payment/paypal.png) no-repeat center;
+	-webkit-background-size: 100%;
+	     -o-background-size: 100%;
+	        background-size: 100%;
+}
+.means-of-payment .mean.cb .logo {
+	background: url(../img/payment/cb.png) no-repeat center;
+	-webkit-background-size: 90%;
+	     -o-background-size: 90%;
+	        background-size: 90%;
+}
+.means-of-payment .mean.paysafecard .logo {
+	background: url(../img/payment/paysafecard.png) no-repeat center;
+	-webkit-background-size: 90%;
+	     -o-background-size: 90%;
+	        background-size: 90%;
+}
+.means-of-payment .mean.youpass .logo {
+	background: url(../img/payment/youpass.png) no-repeat center;
+	-webkit-background-size: 90%;
+	     -o-background-size: 90%;
+	        background-size: 90%;
+}
+
+
+/****************************************/
+/*    CHOIX DU PRODUIT                  */
+/****************************************/
+.products {
+	display: block;position: relative;
+	width: 600px;height: 100%;
+	
+	padding: 50px;
+	
+	float: left;
+}
+
+.products .no-product {
+	display: block;position: relative;
+	width: 100%;height: 100%;
+	
+	background: url(../img/warn.png) no-repeat center 50px;
+}
+.products .no-product h2 {
+	padding-top: 120px;
+	
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	text-align: center;
+	font-weight: 300;
+	font-size: 1.5em;
+	color: #FFF;
+}
+
+.products .product {
+	display: block;position: relative;
+	width: 18%;height: 100%;
+	float: left;
+	
+	margin: 0 1.25%;
+	
+	background: #ecf0f1;
+	
+	-webkit-transition: ease-out .2s;
+	   -moz-transition: ease-out .2s;
+	    -ms-transition: ease-out .2s;
+	     -o-transition: ease-out .2s;
+	        transition: ease-out .2s;
+}
+.products .product:first-child{margin-left: 0}
+.products .product:last-child {margin-right:0}
+.products .product:after {
+	display: block;position: absolute;
+	left: -3px;top: -3px;right: -3px;bottom: -3px;
+	width: 100%;height: 100%;
+	content: " ";
+	
+	border: 0 solid rgba(255,255,255,0.1);
+}
+
+.products .product .product-container,
+.products .product a {
+	display: block;position: relative;
+	width: 100%;height: 100%;
+	text-decoration: underline;
+	color: #000;
+	
+	z-index: 1;
+}
+.products .product .coins {
+	display: block;position: absolute;
+	width: 100%;height: 150px;
+	top: 30px;
+	
+	background: url(../img/coins.png) no-repeat top center;
+	padding-top: 50px;
+	
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	text-align: center;
+	font-size: 1.2em;
+}
+.products .product .coins span {
+	display: block;position: relative;
+	font-weight: bold;
+	margin-bottom: -10px;
+	
+	-webkit-transition: ease-out .2s;
+	   -moz-transition: ease-out .2s;
+	    -ms-transition: ease-out .2s;
+	     -o-transition: ease-out .2s;
+	        transition: ease-out .2s;
+}
+.products .product .coins.reduc {
+	background: none;
+	top: 75px;
+	font-size: 1em;
+	
+	font-weight: bold;
+	color: #2980b9;
+	
+	line-height: 1em;
+}
+.products .product .price-container {
+	display: block;position: absolute;
+	bottom: 0;left: 0;right: 0;
+	width: 100%;height: 120px;
+	
+	background: rgba(0, 0, 0, .08);
+	
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	text-align: center;
+	
+	-webkit-transition: ease-out .2s;
+	   -moz-transition: ease-out .2s;
+	    -ms-transition: ease-out .2s;
+	     -o-transition: ease-out .2s;
+	        transition: ease-out .2s;
+	
+	padding-top: 55px;
+}
+.products .product .price-container:after {
+	position: absolute;
+	height: 0;width: 0;
+	top: 0;left: 0;
+	content: " ";
+	
+	border: solid transparent;
+	pointer-events: none;
+	border-top-color: #ecf0f1;
+	border-width: 45px;
+	
+	-webkit-transition: ease-out .2s;
+	   -moz-transition: ease-out .2s;
+	    -ms-transition: ease-out .2s;
+	     -o-transition: ease-out .2s;
+	        transition: ease-out .2s;
+}
+.products .product .price-container .price {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.products .product:hover {
+	background: #dee4e5;
+	cursor: pointer;
+}
+.products .product:hover:after {border-width:3px}
+.products .product:hover .price-container {height:125px;background:#3498db;color:white}
+.products .product:hover .price-container:after {border-top-color:#dee4e5}
+
+.main-container span.warning {
+	position: absolute;
+	bottom: 10px;right: 15px;
+	
+	font-family: "Open Sans", sans-serif;
+	font-weight: bold;
+	font-size: .85em;
+	color: #FFF;
+}
+
+/****************************************/
+/*    CONFIRMATION DU PRODUIT           */
+/****************************************/
+.product-confirmation {
+	display: block;position: relative;
+	width: 600px;height: 100%;
+	
+	padding: 20px;
+	
+	float: left;
+}
+
+.product-confirmation h1.title {
+	display: block;position: relative;
+	
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	font-size: 1.4em;
+	color: #DDD;
+}
+.product-confirmation .product-info-box {
+	display: block;position: relative;
+	width: 100%;height: 80px;
+	
+	margin: 20px 0;
+	
+	background: #ecf0f1;
+}
+.product-confirmation .product-info-box .coins {
+	display: block;position: absolute;
+	width: 150px;height: 100%;
+	top: 0;left: 30px;
+	
+	background: url(../img/coins.png) no-repeat center left;
+	padding-left: 50px;
+	padding-top: 15px;
+	
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	text-align: center;
+	font-size: 1.4em;
+}
+.product-confirmation .product-info-box .coins span {
+	display: block;position: relative;
+	font-weight: bold;
+	margin-bottom: -10px;
+	
+	-webkit-transition: ease-out .2s;
+	   -moz-transition: ease-out .2s;
+	    -ms-transition: ease-out .2s;
+	     -o-transition: ease-out .2s;
+	        transition: ease-out .2s;
+}
+.product-confirmation .product-info-box .price-container {
+	display: block;position: absolute;
+	bottom: 0;top: 0;right: 0;
+	width: 250px;height: 100%;
+	
+	background: rgba(0, 0, 0, .08);
+	
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-size: 1.1em;
+	text-align: center;
+	padding-top: 12px;
+	padding-left: 50px;
+	
+	-webkit-transition: ease-out .2s;
+	   -moz-transition: ease-out .2s;
+	    -ms-transition: ease-out .2s;
+	     -o-transition: ease-out .2s;
+	        transition: ease-out .2s;
+}
+.product-confirmation .product-info-box .price-container:after {
+	position: absolute;
+	height: 0;width: 0;
+	top: 0;left: 0;
+	content: " ";
+	
+	border: solid transparent;
+	pointer-events: none;
+	border-left-color: #ecf0f1;
+	border-width: 40px;
+	
+	-webkit-transition: ease-out .2s;
+	   -moz-transition: ease-out .2s;
+	    -ms-transition: ease-out .2s;
+	     -o-transition: ease-out .2s;
+	        transition: ease-out .2s;
+}
+.product-confirmation .product-info-box .price-container .price {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.product-confirmation .advantages-box {
+	display: block;position: relative;
+	width: 100%;height: 150px;
+	
+	background: rgba(255, 255, 255, 0.2);
+	padding: 10px;
+}
+.product-confirmation .advantages-box h3 {
+	font-family: "Open Sans", sans-serif;
+	text-transform: uppercase;
+	font-size: 0.9em;
+	
+	color: #FFF;
+}
+.product-confirmation .advantages-box .col {
+	position: relative;
+	width: 30%;height: 80%;
+	
+	float: left;
+	margin: 5px 1.6665%;
+}
+.product-confirmation .advantages-box .col.home {
+	background: url("/img/minecraft/bed.png") no-repeat top center;
+	-webkit-background-size: 64px;
+	     -o-background-size: 64px;
+	        background-size: 64px;
+}
+.product-confirmation .advantages-box .col.claim {
+	background: url("/img/minecraft/iron_bars.png") no-repeat top center;
+	-webkit-background-size: 50px;
+	     -o-background-size: 50px;
+	        background-size: 50px;
+}
+.product-confirmation .advantages-box .col.tpa {
+	background: url("/img/minecraft/enderpearl.png") no-repeat 53px 0;
+	-webkit-background-size: 64px;
+	     -o-background-size: 64px;
+	        background-size: 64px;
+}
+.product-confirmation .advantages-box .col span {
+	position: absolute;
+	width: 100%;height: auto;
+	bottom: 0;
+	
+	font-family: "Open Sans", sans-serif;
+	font-size: .9em;
+	text-align: center;
+	color: #FFF;
+}
+.product-confirmation .advantages-box .col span b {font-size: 1.5em}
+
+.product-confirmation .confirm-button {
+	display: block;position: relative;
+	width: auto;height: 40px;
+	
+	padding: 0 25px;
+	margin-top: 20px;
+	
+	background: #27ae60;
+	line-height: 40px;
+	float: right;
+	
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	font-size: 1.2em;
+	color: #FFF;
+}
+
+.product-confirmation .confirm-button.button-youpass {
+	background: url("https://static.youpass.com/frontend/images/payment-button/payment-button-white-small.png") no-repeat left top;
+	margin-top: 10px;
+	width: 141px;height: 60px;
+	-webkit-background-size: 100%;
+	     -o-background-size: 100%;
+	        background-size: 100%;
+}
+.product-confirmation .confirm-button.button-youpass span {display:none}
+
+
+/****************************************/
+/*    BOITE DE TRANSACTION              */
+/****************************************/
+.transaction-container {
+	display: block;position: relative;
+	width: 600px;height: 100%;
+	
+	padding: 50px;
+	
+	float: left;
+}
+.transaction-container .success-message {
+	display: block;position: relative;
+	width: 100%;height: 100%;
+	
+	background: url(../img/checkmark.png) no-repeat center 50px;
+}
+.transaction-container .error-message {
+	display: block;position: relative;
+	width: 100%;height: 100%;
+	
+	background: url(../img/warn.png) no-repeat center 50px;
+}
+.transaction-container h2 {
+	padding-top: 120px;
+	
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	text-align: center;
+	font-weight: 300;
+	font-size: 1.5em;
+	color: #FFF;
+}
+
+
+/****************************************/
+/*    CODE PAYSAFECARD A ENTRER         */
+/****************************************/
+.enter-paysafecard .input {clear:both;margin:10px 0;height:40px}
+.enter-paysafecard .input label {
+	display: block;position: relative;
+	width: 40%;height: auto;
+	float: left;
+	
+	color: #FFF;
+	font-family: "Open Sans", Arial, sans-serif;
+	line-height: 40px;
+	font-size: 1.1em;
+}
+.enter-paysafecard .input input {
+	display: block;position: relative;
+	width: 60%;
+	float: left;
+	
+	padding: 5px 20px;
+	
+	background: #FFF;
+	font-weight: bold;
+	font-size: 1em;
+	border: none;
+	color: #000;
+}
+.enter-paysafecard .input.codes input {
+	width: 14%;
+	margin: 0 .66666%;
+	float: left;
+}
+.enter-paysafecard .input.codes input:nth-child(2){margin-left: 0}
+.enter-paysafecard .input.codes input:nth-child(5){margin-right:0}
+
+.enter-paysafecard .product-info-box { height: 60px; }
+.enter-paysafecard .product-info-box .coins { padding-top: 5px }
+.enter-paysafecard .product-info-box .price-container { padding-top: 3px }
+.enter-paysafecard .product-info-box .price-container .price{ margin-bottom: -5px; }
+.enter-paysafecard .product-info-box .price-container:after { border-width: 30px; }
+
+.enter-paysafecard .notif.warning {
+	display: block;position: relative;
+	width: 100%;height: auto;
+	
+	border-left: 5px solid #e67e22;
+	text-align: justify;
+
+	background: #EEE;
+	font-family: "Open Sans", sans-serif;
+	font-size: .9em;
+	padding: 15px;
+}
+
+.enter-paysafecard .confirm-button { margin-top: 10px; }
+
+
+/****************************************/
+/*    CONDITIONS                        */
+/****************************************/
+.main-container.conditions-container {
+	width: 960px;height: 600px;	
+}
+
+.conditions-content-container {
+	display: block;position: relative;
+	width: 860px;height: 100%;
+
+	overflow: hidden;
+	
+	margin-left: 0;
+	float: left;
+}
+.conditions-content-container h1 {
+	display: block;position: relative;
+	
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	font-size: 1.4em;
+	color: #FFF;
+	
+	padding: 25px;
+}
+.conditions-content-container p.subtitle {
+	position: relative;
+	padding: 0 25px;
+	top: -25px;
+	
+	text-transform: uppercase;
+	font-size: 0.95em;
+}
+.conditions-content-container p.subtitle b{color:inherit}
+.conditions-content-container .conditions-content {
+	display: block;position: relative;
+	width: 100%;height: calc(100% - 98px);
+	
+	overflow: hidden;
+	-ms-overflow-y: auto;
+	    overflow-y: auto;
+	
+	background: #EEE;
+	padding: 25px;
+}
+.conditions-content-container .conditions-content *     {color:#000}
+.conditions-content-container .conditions-content h3    {font-family:"Open Sans",sans-serif;text-transform:uppercase;padding:15px 0}
+.conditions-content-container .conditions-content h4    {font-family:"Open Sans",sans-serif;margin:10px 0}
+.conditions-content-container .conditions-content ul,
+.conditions-content-container .conditions-content ol    {margin:10px 30px}
+.conditions-content-container .conditions-content ul li,
+.conditions-content-container .conditions-content ol li {font-family:Helvetica,Arial,sans-serif;margin:8px 0}
+
+.conditions-content-container .conditions-content ol           {list-style-type:none;margin:10px 20px;counter-reset:section}
+.conditions-content-container .conditions-content ol li:before {counter-increment:section;content:counters(section,".")".";padding-right:8px}
+
+.conditions-content-container .conditions-content a     {font-weight:bold;color:#337AB7}
+.conditions-content-container .conditions-content p b   {font-size:1em}
+
+
+
+/****************************************/
+/*    LE PETIT PLUS                     */
+/****************************************/
+@keyframes shake {
+	10%, 90%      { transform: translate3d(-1px, 0, 0); }
+	20%, 80%      { transform: translate3d( 2px, 0, 0); }
+	30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+	40%, 60%      { transform: translate3d( 4px, 0, 0); }
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background-color: #eaeaea;
+    border-left: 1px solid #ccc;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
